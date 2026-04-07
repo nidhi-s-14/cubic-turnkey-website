@@ -5,7 +5,7 @@ const objectives = [
   "Service",
   "Communication",
   "Innovation",
-  "Honesty & Integrity",
+  "Honesty",
 ];
 
 const leaders = [
