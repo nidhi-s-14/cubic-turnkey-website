@@ -28,10 +28,10 @@ function HomePage() {
         <div className="home-hero-overlay" />
         <div className="home-hero-content">
           <h1>Constructing value through experience and expertise.</h1>
-          <p className="home-hero-text">
+          {/* <p className="home-hero-text">
             Building a world where businesses and communities thrive in
             sustainable and safe construction.
-          </p>
+          </p> */}
           <div className="hero-actions">
             <Link className="button button-primary" to="/services">
               Explore Our Services
