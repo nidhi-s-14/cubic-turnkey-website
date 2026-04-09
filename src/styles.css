@@ -252,6 +252,13 @@ img {
   padding: clamp(2rem, 4vw, 4rem);
 }
 
+.hero-banner-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--base-white);
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--brand-green);
@@ -269,6 +276,17 @@ img {
   color: var(--base-black);
   font-family: var(--font-heading);
   line-height: 0.98;
+}
+
+.hero-banner-image h1,
+.hero-banner-image .hero-text,
+.hero-banner-image .panel-title,
+.hero-banner-image li {
+  color: var(--base-white);
+}
+
+.hero-banner-image .hero-support {
+  border-top-color: rgba(255, 255, 255, 0.22);
 }
 
 .hero-banner h1 {

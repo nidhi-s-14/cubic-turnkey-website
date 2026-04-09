@@ -27,7 +27,6 @@ function HomePage() {
       <section className="home-hero">
         <div className="home-hero-overlay" />
         <div className="home-hero-content">
-          <p className="home-hero-kicker">Sustainability through experience and expertise</p>
           <h1>Constructing value through experience and expertise.</h1>
           <p className="home-hero-text">
             Building a world where businesses and communities thrive in
