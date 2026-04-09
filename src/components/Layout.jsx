@@ -11,6 +11,7 @@ const navItems = [
 ];
 
 function Layout({ children }) {
+  const assetBase = import.meta.env.BASE_URL;
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -18,7 +19,11 @@ function Layout({ children }) {
     <div className={isHome ? "site-shell site-shell-home" : "site-shell"}>
       <header className={isHome ? "site-header site-header-home" : "site-header"}>
         <NavLink className="brand" to="/" aria-label="Cubic Turnkey home">
-          <img className="brand-lockup" src="/brand/logo-with-text.png" alt="Cubic Turnkey" />
+          <img
+            className="brand-lockup"
+            src={`${assetBase}brand/logo-with-text.png`}
+            alt="Cubic Turnkey"
+          />
         </NavLink>
 
         <nav className={isHome ? "site-nav site-nav-home" : "site-nav"} aria-label="Primary navigation">
@@ -45,7 +50,7 @@ function Layout({ children }) {
       <footer className="site-footer">
         <div className="footer-brand-block">
           <div className="footer-brand">
-            <img className="footer-logo" src="/brand/logo-only.png" alt="" />
+            <img className="footer-logo" src={`${assetBase}brand/logo-only.png`} alt="" />
             <div>
               <p className="footer-name">Cubic Turnkey Pvt. Ltd.</p>
               <p className="footer-copy">Sustainability through experience and expertise.</p>

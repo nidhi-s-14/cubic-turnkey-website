@@ -31,12 +31,14 @@ const leaders = [
 ];
 
 function AboutPage() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <>
       <PageHero
         title="An experienced leadership team shaped by quality and customer focus."
         description=""
-        backgroundImage="/about/hero.png"
+        backgroundImage={`${assetBase}about/hero.png`}
       />
 
       <SectionBlock
