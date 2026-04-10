@@ -36,8 +36,8 @@ function HomePage() {
             <Link className="button button-primary" to="/services">
               Explore Our Services
             </Link>
-            <Link className="button button-secondary button-secondary-light" to="/gallery">
-              View Client Portfolio
+            <Link className="button button-secondary button-secondary-light" to="/projects">
+              View Project Highlights
             </Link>
           </div>
         </div>
