@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { NavLink, useLocation } from "react-router-dom";
 
 const navItems = [
@@ -78,49 +79,66 @@ function Layout({ children }) {
       <main className={isHome ? "site-main site-main-home" : "site-main"}>{children}</main>
 
       <footer className="site-footer">
-        <div className="footer-brand-block">
-          <div className="footer-brand">
-            <img
-              className="footer-lockup"
-              src={`${assetBase}brand/logo-with-text.png`}
-              alt="Cubic Turnkey"
-            />
+        <div className="site-footer-inner">
+          <div className="footer-brand-block">
+            <div className="footer-brand">
+              <img
+                className="footer-lockup"
+                src={`${assetBase}brand/logo-with-text.png`}
+                alt="Cubic Turnkey"
+              />
+            </div>
+            <div className="footer-contact">
+              <p>
+                <strong>Phone:</strong>{" "}
+                <a className="footer-contact-link" href="tel:+917400151756">
+                  +91 74001 51756
+                </a>
+              </p>
+              <p>
+                <strong>Email:</strong>{" "}
+                <a className="footer-contact-link" href="mailto:biz@cubicindia.in">
+                  biz@cubicindia.in
+                </a>
+              </p>
+              <p>
+                <strong>Address:</strong> 36 Manoj Udyog, 40/A G.G. Ambedkar Marg, Wadala,
+                Mumbai 400031, India.
+              </p>
+              <div className="footer-socials" aria-label="Social links">
+                <a
+                  className="footer-social-link"
+                  href="https://www.linkedin.com/company/cubicturnkeyprivatelimited/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Cubic Turnkey on LinkedIn"
+                >
+                  <FaLinkedinIn aria-hidden="true" />
+                </a>
+                <a
+                  className="footer-social-link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Cubic Turnkey on Facebook"
+                >
+                  <FaFacebookF aria-hidden="true" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="footer-contact">
-            <p>
-              <strong>Phone:</strong> +91 74001 51756
-            </p>
-            <p>
-              <strong>Email:</strong> biz@cubicindia.in
-            </p>
-            <p>
-              <strong>Address:</strong> 36 Manoj Udyog, 40/A G.G. Ambedkar Marg, Wadala,
-              Mumbai 400031, India.
-            </p>
-            <p>
-              <strong>LinkedIn:</strong>{" "}
-              <a
-                className="footer-linkedin"
-                href="https://www.linkedin.com/company/cubicturnkeyprivatelimited/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                cubicturnkeyprivatelimited
-              </a>
-            </p>
-          </div>
-        </div>
 
-        <nav className="footer-sitemap" aria-label="Footer sitemap">
-          <p className="footer-heading">Sitemap</p>
-          <div className="footer-links">
-            {navItems.map((item) => (
-              <NavLink key={item.to} className="footer-link" to={item.to}>
-                {item.label}
-              </NavLink>
-            ))}
-          </div>
-        </nav>
+          <nav className="footer-sitemap" aria-label="Footer sitemap">
+            <p className="footer-heading">Sitemap</p>
+            <div className="footer-links">
+              {navItems.map((item) => (
+                <NavLink key={item.to} className="footer-link" to={item.to}>
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </nav>
+        </div>
       </footer>
     </div>
   );
