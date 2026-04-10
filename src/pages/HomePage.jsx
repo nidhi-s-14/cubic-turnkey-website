@@ -47,22 +47,20 @@ function HomePage() {
         <SectionBlock
           eyebrow="Who We Are"
           title="A premier team focused on on-time, on-budget delivery."
-          description="This section is ready for the company overview from the sitemap, including Mumbai roots, multi-disciplinary expertise, and the tailored project approach."
+          description="In any project, Scope and Time are slave drivers who demand adherence, sometimes at the expense of other factors like Quality, Budget, Resources, and Perfection. Sometimes project risks bring up threats and opportunities that need to be managed. The solution lies in maintaining a fine balance between all. This is where we come in with our Experience and Expertise in project management."
         />
 
         <SectionBlock
-          eyebrow="Core Services"
-          title="A homepage summary of the company’s primary offerings."
-        >
-          <div className="card-grid">
-            {services.map((item) => (
-              <article className="card" key={item}>
-                <h3>{item}</h3>
-                <p>Placeholder summary block ready for the homepage service snapshot.</p>
-              </article>
-            ))}
-          </div>
-        </SectionBlock>
+          eyebrow="Who We Are"
+          title="An innovative and constantly evolving team of experts."
+          description="We are Cubic Turnkey Pvt Ltd. - a team of engineers, architects, valuers, and trainers. The secret of our success lies in our team of highly motivated staff, skilled and trained in their domain of project delivery, catalyzed by an environment of sharing ideas and innovation. Our well-equipped office with continuous technology upgradation supports both remote and on-site engineers with the resources they require to succeed. With market resources getting scarce, our emphasis is on automation and mechanization for efficiency and effectiveness."
+        />
+
+        <SectionBlock
+          eyebrow="Who We Are"
+          title="Environmental emphasis now for a better future."
+          description="We support the adoption of sustainability in our projects to meet present needs without compromising future generations. We aspire to meet clients' needs by addressing economic, environmental, and social life."
+        />
 
         <SectionBlock
           eyebrow="Value Addition"
@@ -78,7 +76,6 @@ function HomePage() {
         <SectionBlock
           eyebrow="Projects & Clients"
           title="Trusted by industry leaders and residential societies."
-          description="This area is reserved for project highlights, client logos, and a future portfolio download CTA."
         >
           <div className="tag-list">
             {clients.map((item) => (

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const navItems = [
@@ -14,35 +15,64 @@ function Layout({ children }) {
   const assetBase = import.meta.env.BASE_URL;
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!isHome) {
+      setIsScrolled(false);
+      return undefined;
+    }
+
+    const updateScrollState = () => {
+      setIsScrolled(window.scrollY > 24);
+    };
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollState);
+    };
+  }, [isHome]);
+
+  const headerClassName = isHome
+    ? `site-header site-header-home${isScrolled ? " site-header-home-scrolled" : ""}`
+    : "site-header";
+
+  const navClassName = isHome
+    ? `site-nav site-nav-home${isScrolled ? " site-nav-home-scrolled" : ""}`
+    : "site-nav";
 
   return (
     <div className={isHome ? "site-shell site-shell-home" : "site-shell"}>
-      <header className={isHome ? "site-header site-header-home" : "site-header"}>
-        <NavLink className="brand" to="/" aria-label="Cubic Turnkey home">
-          <img
-            className="brand-lockup"
-            src={`${assetBase}brand/logo-with-text.png`}
-            alt="Cubic Turnkey"
-          />
-        </NavLink>
+      <header className={headerClassName}>
+        <div className="site-header-inner">
+          <NavLink className="brand" to="/" aria-label="Cubic Turnkey home">
+            <img
+              className="brand-lockup"
+              src={`${assetBase}brand/logo-with-text.png`}
+              alt="Cubic Turnkey"
+            />
+          </NavLink>
 
-        <nav className={isHome ? "site-nav site-nav-home" : "site-nav"} aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                isActive
-                  ? `site-nav-link ${isHome ? "site-nav-link-home " : ""}is-active`
-                  : isHome
-                    ? "site-nav-link site-nav-link-home"
-                    : "site-nav-link"
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
+          <nav className={navClassName} aria-label="Primary navigation">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? `site-nav-link ${isHome ? "site-nav-link-home " : ""}${isScrolled ? "site-nav-link-home-scrolled " : ""}is-active`
+                    : isHome
+                      ? `site-nav-link site-nav-link-home${isScrolled ? " site-nav-link-home-scrolled" : ""}`
+                      : "site-nav-link"
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
       </header>
 
       <main className={isHome ? "site-main site-main-home" : "site-main"}>{children}</main>
@@ -50,13 +80,35 @@ function Layout({ children }) {
       <footer className="site-footer">
         <div className="footer-brand-block">
           <div className="footer-brand">
-            <img className="footer-logo" src={`${assetBase}brand/logo-only.png`} alt="" />
-            <div>
-              <p className="footer-name">Cubic Turnkey Pvt. Ltd.</p>
-              <p className="footer-copy">Sustainability through experience and expertise.</p>
-            </div>
+            <img
+              className="footer-lockup"
+              src={`${assetBase}brand/logo-with-text.png`}
+              alt="Cubic Turnkey"
+            />
           </div>
-          <p className="footer-note">Constructing value through experience and expertise.</p>
+          <div className="footer-contact">
+            <p>
+              <strong>Phone:</strong> +91 74001 51756
+            </p>
+            <p>
+              <strong>Email:</strong> biz@cubicindia.in
+            </p>
+            <p>
+              <strong>Address:</strong> 36 Manoj Udyog, 40/A G.G. Ambedkar Marg, Wadala,
+              Mumbai 400031, India.
+            </p>
+            <p>
+              <strong>LinkedIn:</strong>{" "}
+              <a
+                className="footer-linkedin"
+                href="https://www.linkedin.com/company/cubicturnkeyprivatelimited/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                cubicturnkeyprivatelimited
+              </a>
+            </p>
+          </div>
         </div>
 
         <nav className="footer-sitemap" aria-label="Footer sitemap">
