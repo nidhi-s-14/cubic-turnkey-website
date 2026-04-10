@@ -2,34 +2,35 @@ import PageHero from "../components/PageHero";
 import SectionBlock from "../components/SectionBlock";
 
 const serviceGroups = [
-  "Project Management & Redevelopment",
-  "Turnkey Construction & Contracting",
-  "Structural Audits & Repairs Consulting",
-  "Architecture & Valuation",
-  "Corporate Training, Consulting & Software",
+  "Structural Audits",
+  "Structural Repairs",
+  "Strcutural Retrofitting",
+  "Structural Strengthening",
+  "Structural Design",
+  "Project Management",
+  "Redevelopment",
+  "Turnkey Construction",
+  "Architecture",
+  "Valuation",
+  "Business Growth Consulting",
+  "Corporate Training",
+  "Software",
 ];
 
 function ServicesPage() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <>
       <PageHero
-        title="A structured home for the company’s full offering."
-        description="Each core service area from the sitemap now has its own placeholder block, making it easy to deepen the content page by page."
-        aside={
-          <>
-            <p className="panel-title">Ready to expand</p>
-            <ul>
-              <li>Service overviews</li>
-              <li>Sector-specific examples</li>
-              <li>Detailed capabilities and outcomes</li>
-            </ul>
-          </>
-        }
+        title="High quality services offered by our experts to trusted clients."
+        description=""
+        backgroundImage={`${assetBase}services/hero.jpg`}
       />
 
       <SectionBlock
         eyebrow="Offerings"
-        title="Five service groups mapped directly from the sitemap."
+        title="Services offered by us."
       >
         <div className="stack-grid">
           {serviceGroups.map((item) => (
