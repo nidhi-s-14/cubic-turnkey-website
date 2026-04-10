@@ -25,6 +25,24 @@ const objectives = [
   },
 ];
 
+const certifications = [
+  {
+    title: "ISO Quality Policy",
+    description:
+      "Cubic Turnkey Private Limited is committed to delivering structural audits, structural designs, and project management services that help businesses and communities thrive in sustainable and safe construction.",
+  },
+  {
+    title: "Health & Safety",
+    description:
+      "The company follows a zero-accident mindset, promotes preventative safety culture, and insists on safe practices by employees and subcontractors at all times.",
+  },
+  {
+    title: "Compliance & Ethics",
+    description:
+      "The team is committed to meeting compliance obligations, maintaining transparent budgeting, and managing contractors with clear technical and ethical standards.",
+  },
+];
+
 const founders = [
   {
     name: "Mr. Tejas Sura",
@@ -139,6 +157,7 @@ function getInitials(name) {
 
 function AboutPage() {
   const assetBase = import.meta.env.BASE_URL;
+  const jobsUrl = "https://www.linkedin.com/company/cubicturnkeyprivatelimited/jobs/";
 
   return (
     <>
@@ -169,9 +188,35 @@ function AboutPage() {
       </SectionBlock>
 
       <SectionBlock
+        eyebrow="ISO & Compliance"
+        title="Quality, safety, and ethics are built into the way the company operates."
+      >
+        <div className="card-grid">
+          {certifications.map((item) => (
+            <article className="card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </SectionBlock>
+
+      <SectionBlock
         eyebrow="Leadership"
         title="Founders and advisors that built the company."
+        description="For current opportunities, explore openings on the company LinkedIn jobs page."
       >
+        <div className="about-jobs-cta">
+          <a
+            className="button button-primary"
+            href={jobsUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Explore Jobs on LinkedIn
+          </a>
+        </div>
+
         <div className="founder-grid">
           {founders.map((person) => (
             <article className="founder-card" key={person.name}>

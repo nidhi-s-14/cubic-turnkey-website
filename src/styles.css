@@ -283,7 +283,7 @@ img {
 }
 
 .page-hero {
-  padding: 1rem 0 2rem;
+  padding: 2rem 0 2rem;
 }
 
 .hero-banner,
@@ -613,6 +613,10 @@ img {
 
 .profile-card-body p:last-child {
   margin-top: auto;
+}
+
+.about-jobs-cta {
+  margin-top: 1.5rem;
 }
 
 .card {
