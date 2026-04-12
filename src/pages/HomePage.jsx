@@ -45,7 +45,7 @@ function HomePage() {
 
       <div className="page-content-shell">
         <SectionBlock
-          eyebrow="Who We Are"
+          eyebrow="Industry Needs"
           title="A premier team focused on on-time, on-budget delivery."
           description="In any project, Scope and Time are slave drivers who demand adherence, sometimes at the expense of other factors like Quality, Budget, Resources, and Perfection. Sometimes project risks bring up threats and opportunities that need to be managed. The solution lies in maintaining a fine balance between all. This is where we come in with our Experience and Expertise in project management."
         />
@@ -57,7 +57,7 @@ function HomePage() {
         />
 
         <SectionBlock
-          eyebrow="Who We Are"
+          eyebrow="Environmental Impact"
           title="Environmental emphasis now for a better future."
           description="We support the adoption of sustainability in our projects to meet present needs without compromising future generations. We aspire to meet clients' needs by addressing economic, environmental, and social life."
         />

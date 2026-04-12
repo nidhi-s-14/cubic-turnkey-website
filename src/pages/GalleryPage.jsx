@@ -3,30 +3,42 @@ import SectionBlock from "../components/SectionBlock";
 
 const projectHighlights = [
   {
-    image: "gallery/placeholder_2.png",
-    title: "Industrial and Commercial Delivery",
+    image: "projects/residential.jpg",
+    title: "Residential Construction",
     description:
-      "Selected work across industrial, commercial, and institutional environments where planning, execution, and technical clarity matter most.",
+      "Includes housing projects such as single-family homes, apartments, townhouses, and subdivided communities.",
   },
   {
-    image: "gallery/placeholder_3.png",
-    title: "Turnkey Construction Highlights",
+    image: "projects/commercial.jpg",
+    title: "Commercial Construction",
     description:
-      "A rotating snapshot of projects that reflect the company’s strength in turnkey coordination, quality control, and practical execution.",
+      "Involves projects for private businesses, including office buildings, retail spaces, shopping malls, restaurants, and hotels.",
   },
   {
-    image: "gallery/placeholder_4.png",
-    title: "Structural and Architectural Expertise",
+    image: "projects/institutional.jpg",
+    title: "Institutional Construction",
     description:
-      "Representative visuals that can evolve into full case studies, before-and-after stories, and client-backed project narratives.",
+      "Covers public or private facilities like schools, hospitals, universities, government buildings, and worship centres.",
+  },
+  {
+    image: "projects/industrial.jpg",
+    title: "Industrial Construction",
+    description:
+      "Focuses on specialised structures like manufacturing plants, factories, refineries, and warehouses.",
+  },
+  {
+    image: "projects/heavy_civil_infrastructure.jpg",
+    title: "Heavy Civil/Infrastructure Construction",
+    description:
+      "Includes public-sector projects involving infrastructure, such as highways, bridges, tunnels, airports, and water treatment systems.",
   },
 ];
 
 const projectTiles = [
-  "Redevelopment consulting",
-  "Turnkey construction",
-  "Structural audits and repairs",
-  "Architecture and interiors",
+  "Project 1",
+  "Project 2",
+  "Project 3",
+  "Project 4",
 ];
 
 function ProjectsPage() {
@@ -80,7 +92,7 @@ function ProjectsPage() {
       <SectionBlock
         eyebrow="Featured Work"
         title="A growing portfolio of construction, audit, and design-led delivery."
-        description="This page can expand over time into full project stories, sector filters, downloadable portfolios, and client-specific highlights."
+        description="Browse our ongoing and completed projects."
       >
         <div className="gallery-grid">
           {projectTiles.map((item, index) => (

@@ -50,7 +50,7 @@ const founders = [
     image: "about/tejassura.jpeg",
     linkedin: "https://www.linkedin.com/in/tejassura/",
     description:
-      "Mr Tejas Sura has over 20 years experience in areas of Project Management, Structural Engineering, Procurement and Construction. He is an accepted corporate trainer, in Project Management and Civil Engineering. The proof of his ability is visible through his globally recognised education and certifications from The University of Texas at Austin, Project Management Institute, Welingkars and VJTI. He holds Licenses granted by The Municipal Corporation of Greater Mumbai to practice Structural Engineering and Plumbing Consulting. He has contributed in committees that define international and national standards in Project Management and Civil Engineering, and has addressed various global technical forums. Cubic Turnkey Pvt. Ltd. is a brainchild of Mr. Tejas Sura; it was created to service the requirements of the present construction, real estate and infrastructure industry. The current challenges in this industry can be met by the company, which is architectured around his vast experience and expertise.",
+      "Mr Tejas Sura has over 20 years experience in Project Management, Structural Engineering, Procurement and Construction. He is an accomplished corporate trainer in Project Management and Civil Engineering. He has a globally recognised education and certifications from The University of Texas at Austin, Project Management Institute, Welingkars and VJTI. He holds Licenses granted by The Municipal Corporation of Greater Mumbai to practice Structural Engineering and Plumbing Consulting. He has contributed in committees that define international and national standards in Project Management and Civil Engineering, and has addressed various global technical forums. Cubic Turnkey was his brainchild to service the requirements of the present construction, real estate and infrastructure industry.",
   },
   {
     name: "Mrs. Keyuri Sura",
@@ -89,43 +89,19 @@ const team = [
   },
   {
     name: "Mrs. Ratna Bavadekar",
-    role: "Advisory Team",
+    role: "Architect",
     image: "about/ratna.png",
     linkedin: "",
     description:
       "Mrs. Ratna Bavadekar is an international architect of repute, registered with the Council of Architecture. She is credited with completing several architectural assignments, and has won awards for them. Her expertise covers, but is not limited, by commercial, residential, landscaping and interior design. ",
   },
   {
-    name: "Mr. Manish Patel",
-    role: "Advisory Team",
-    image: "about/manish.png",
+    name: "Mr. Manoj Parmar",
+    role: "Architect",
+    image: "",
     linkedin: "",
     description:
-      "Mr. Manish Patel is a graduate from Jamnalal Bajaj Institute of Management Studies. He has chosen Construction Management as his area of expertise. He has vast experience in interiors of retail chains and gymnasia, repair of heritage structures, mass housing projects and residential building.",
-  },
-  {
-    name: "Mr. Dattatraya Pathak",
-    role: "Advisory Team",
-    image: "about/dattatraya.png",
-    linkedin: "",
-    description:
-      "Mr. Dattatraya Pathak has over thirty years of professional experience in delivery of Information Technology (IT) projects and programs using various project execution methodologies. Imparted Project/Program/Portfolio training to practitioners and has set up Project Management Office for large organisations.",
-  },
-  {
-    name: "Mr. Raju Rao",
-    role: "Advisory Team",
-    image: "about/raju.png",
-    linkedin: "",
-    description:
-      "Mr. Raju Rao is a veteran practitioner and trainer of project management principles. He has several qualifications conferred upon him by universities in India and overseas. A venerated member of many professional associations working in the areas of Project Management and Cost. He is an author of several publications in Project Management. And a globally certified assessor for an organisation's project management maturity.",
-  },
-  {
-    name: "Mr. Vishvanath Rangan",
-    role: "Advisory Team",
-    image: "about/vishvanath.png",
-    linkedin: "",
-    description:
-      "Mr. Vishvanath Rangan has been in the IT field for the past 35 years and has overseen the implementation of large IT mega projects. His expertise is in the areas of Business Process and administration. All these are aimed at bringing efficiency to the work done by Cubic Turnkey India Pvt. Ltd.",
+      "",
   },
   {
     name: "Mr. Ranganath Satam",
@@ -167,11 +143,29 @@ function AboutPage() {
         backgroundImage={`${assetBase}about/hero.png`}
       />
 
-      <SectionBlock
-        eyebrow="Philosophy"
-        title="Continuous improvement and technical excellence."
-        description="Goal setting, concentration, and determination are the key ingredients needed for the success of any service-oriented business. We have always employed these principles to make our company a winning organisation. While maintaining the utmost in technical expertise, quality becomes the focal point in our endeavour to manage projects. Each and everyone at Cubic Turnkey Pvt. Ltd. is committed to providing a consistently high level of client service."
-      />
+      <section className="section section-split about-philosophy">
+        <div className="section-heading">
+          <p className="eyebrow">Philosophy</p>
+          <h2>Continuous improvement and technical excellence.</h2>
+          <p>
+            Goal setting, concentration, and determination are the key
+            ingredients needed for the success of any service-oriented business.
+            We have always employed these principles to make our company a
+            winning organisation. While maintaining the utmost in technical
+            expertise, quality becomes the focal point in our endeavour to
+            manage projects. Each and everyone at Cubic Turnkey Pvt. Ltd. is
+            committed to providing a consistently high level of client service.
+          </p>
+        </div>
+
+        <div className="about-philosophy-image-card">
+          <img
+            className="about-philosophy-image"
+            src={`${assetBase}about/team.jpeg`}
+            alt="Cubic Turnkey team"
+          />
+        </div>
+      </section>
 
       <SectionBlock
         eyebrow="Objectives"

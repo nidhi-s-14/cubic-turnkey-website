@@ -2,10 +2,8 @@ import PageHero from "../components/PageHero";
 import SectionBlock from "../components/SectionBlock";
 
 const serviceGroups = [
-  "Structural Audits",
-  "Structural Repairs",
-  "Strcutural Retrofitting",
-  "Structural Strengthening",
+  "Structural Audits & Repairs",
+  "Strcutural Retrofitting & Strengthening",
   "Structural Design",
   "Project Management",
   "Redevelopment",
