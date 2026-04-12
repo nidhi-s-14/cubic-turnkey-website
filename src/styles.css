@@ -695,6 +695,119 @@ img {
   padding: 1.5rem;
 }
 
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.contact-summary {
+  max-width: 34rem;
+}
+
+.contact-details-card,
+.contact-form-card {
+  min-height: 100%;
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.contact-info-item {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-info-item p {
+  margin: 0;
+}
+
+.contact-info-label {
+  font-family: var(--font-subheading);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+}
+
+.contact-info-link {
+  color: var(--brand-bronze);
+}
+
+.contact-info-link:hover,
+.contact-info-link:focus-visible {
+  color: var(--brand-green);
+}
+
+.contact-form {
+  margin-top: 1.5rem;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field span {
+  font-family: var(--font-subheading);
+  font-size: 0.9rem;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(34, 34, 34, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--base-charcoal);
+  font: inherit;
+  padding: 0.95rem 1rem;
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: rgba(34, 139, 34, 0.42);
+  box-shadow: 0 0 0 4px rgba(34, 139, 34, 0.08);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.contact-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-form-actions p {
+  margin: 0;
+}
+
 .gallery-tile {
   display: flex;
   align-items: end;
@@ -982,6 +1095,7 @@ img {
 }
 
 @media (max-width: 960px) {
+  .contact-page-grid,
   .founder-grid,
   .team-grid,
   .section-split,
@@ -1083,6 +1197,10 @@ img {
   }
 
   .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-grid {
     grid-template-columns: 1fr;
   }
 

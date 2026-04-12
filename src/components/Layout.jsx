@@ -100,7 +100,7 @@ function Layout({ children }) {
                 </a>
               </p>
               <p>
-                <strong>Address:</strong> 36 Manoj Udyog, 40/A G.G. Ambedkar Marg, Wadala,
+                <strong>Address:</strong> 36 Manoj Udyog, 40/A G.D. Ambedkar Marg, Wadala,
                 Mumbai 400031, India.
               </p>
               <div className="footer-socials" aria-label="Social links">
